@@ -84,14 +84,6 @@
   Clique aqui
 </button>
 ```
-
----
-
-## 10. Tamanho em viewport (tela cheia)
-
-- `w-screen` → largura igual à largura da viewport (100vw)  
-- `h-screen` → altura igual à altura da viewport (100vh)  
-
 ---
 
 ## 12. Exemplo completo do tailwind.config.js com extend
