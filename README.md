@@ -10,6 +10,8 @@
 - `h-full` → altura 100%  
 - `w-screen` → largura 100vw (largura total da viewport)  
 - `h-screen` → altura 100vh (altura total da viewport)  
+- `w-[80%]` → largura de 80% usando valor arbitrário (personalizado)  
+- `h-[80%]` → altura de 80% usando valor arbitrário (personalizado)  
 - `max-w-md` → largura máxima média (aprox 28rem)  
 - `container` → largura máxima responsiva para conteúdo centralizado  
 
