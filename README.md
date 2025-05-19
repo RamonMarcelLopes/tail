@@ -1,12 +1,15 @@
+
 # Comandos mais comuns do Tailwind CSS
 
 ## 1. Layout e espaçamento
-- `p-4` → padding (espacamento interno) de 1rem  
-- `m-4` → margin (espacamento externo) de 1rem  
+- `p-4` → padding (espaçamento interno) de 1rem  
+- `m-4` → margin (espaçamento externo) de 1rem  
 - `pt-2`, `pb-2`, `pl-3`, `pr-3` → padding top, bottom, left, right  
 - `mt-2`, `mb-2`, `ml-3`, `mr-3` → margin top, bottom, left, right  
 - `w-full` → largura 100%  
 - `h-full` → altura 100%  
+- `w-screen` → largura 100vw (largura total da viewport)  
+- `h-screen` → altura 100vh (altura total da viewport)  
 - `max-w-md` → largura máxima média (aprox 28rem)  
 - `container` → largura máxima responsiva para conteúdo centralizado  
 
@@ -62,9 +65,64 @@
 
 ---
 
-## Exemplo simples de uso:
+# Guia avançado Tailwind CSS com exemplos e configurações
+
+## 9. Hover e efeitos
+
+- `hover:bg-blue-700` → muda o fundo para azul escuro no hover  
+- `hover:text-yellow-300` → muda a cor do texto para amarelo no hover  
+- `hover:scale-105` → aumenta a escala em 5% no hover  
+- `transition-transform` → aplica transição suave nas transformações (como scale)  
+- `duration-300` → duração da animação de 300ms  
+
+### Exemplo de botão com hover e animação:
 
 ```html
-<button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+<button class="bg-blue-500 text-white px-4 py-2 rounded
+  hover:bg-blue-700 hover:text-yellow-300 hover:scale-105
+  transition-transform duration-300">
   Clique aqui
 </button>
+```
+
+---
+
+## 10. Tamanho em viewport (tela cheia)
+
+- `w-screen` → largura igual à largura da viewport (100vw)  
+- `h-screen` → altura igual à altura da viewport (100vh)  
+
+---
+
+## 12. Exemplo completo do tailwind.config.js com extend
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}", // ajuste conforme seu projeto
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'custom-green': '#23ec69',
+        'custom-blue': '#1fb6ff',
+        'custom-pink': '#ff49db',
+        'custom-orange': '#ff7849',
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+    },
+  },
+  plugins: [],
+}
+```
